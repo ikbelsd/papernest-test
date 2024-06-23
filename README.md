@@ -1,4 +1,3 @@
-Sure! Here's a complete README for your project:
 
 # Todo List Application
 
