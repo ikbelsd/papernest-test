@@ -138,4 +138,17 @@ describe('TodoListComponent', () => {
     ];
     expect(spy).toHaveBeenCalledWith(reorderTasks({ tasks: expectedTasks }));
   });
+
+  // Verify that TTL input is hidden when in edit mode
+  it('should hide TTL input when in edit mode', () => {
+    component.editMode = true;
+    fixture.detectChanges();
+    const ttlInput = fixture.nativeElement.querySelector('.ttl-input');
+    expect(ttlInput).toBeNull();
+
+    component.editMode = false;
+    fixture.detectChanges();
+    const ttlInputVisible = fixture.nativeElement.querySelector('.ttl-input');
+    expect(ttlInputVisible).not.toBeNull();
+  });
 });

@@ -40,7 +40,24 @@ describe('TodoInputComponent', () => {
   it('should emit addTask event when Add Task button is clicked', () => {
     const spy = jest.spyOn(component.addTask, 'emit'); // Spy on the addTask event emitter
     component.title = 'New Task'; // Set the title for the task
+    fixture.detectChanges(); // Trigger change detection
     fixture.nativeElement.querySelector('button').click(); // Simulate button click
     expect(spy).toHaveBeenCalledWith('New Task'); // Verify that the event was emitted with the correct value
+  });
+
+  // Test that the Add Task button is disabled when the input field is empty or contains only whitespace
+  it('should disable Add Task button when title is empty or whitespace', () => {
+    component.title = ''; // Set the title to empty
+    fixture.detectChanges(); // Trigger change detection
+    let button = fixture.nativeElement.querySelector('button');
+    expect(button.disabled).toBeTruthy(); // Verify that the button is disabled
+
+    component.title = '   '; // Set the title to whitespace
+    fixture.detectChanges(); // Trigger change detection
+    expect(button.disabled).toBeTruthy(); // Verify that the button is still disabled
+
+    component.title = 'Valid Task'; // Set the title to a valid task
+    fixture.detectChanges(); // Trigger change detection
+    expect(button.disabled).toBeFalsy(); // Verify that the button is enabled
   });
 });

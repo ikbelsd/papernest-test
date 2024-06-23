@@ -4,7 +4,7 @@
     <div class="input-section">
       <div class="input-row">
         <app-todo-input class="task-input" *ngIf="!editMode" (addTask)="onAddTask($event)"></app-todo-input>
-        <mat-form-field appearance="outline" class="ttl-input">
+        <mat-form-field appearance="outline" class="ttl-input" *ngIf="!editMode">
           <mat-label>TTL (ms)</mat-label>
           <input matInput [(ngModel)]="ttl" type="number" placeholder="TTL (ms)">
         </mat-form-field>
