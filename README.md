@@ -79,22 +79,5 @@ This is the template for the todo list component. It includes the input section,
 
 This is the test spec for the todo list component. It includes tests for component creation, dispatching actions, and verifying the visibility of the TTL input field based on the edit mode.
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or new features you would like to add.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgements
-
-- Angular: [https://angular.io/](https://angular.io/)
-- NgRx: [https://ngrx.io/](https://ngrx.io/)
-- Jest: [https://jestjs.io/](https://jestjs.io/)
-- Angular Material: [https://material.angular.io/](https://material.angular.io/)
-- Netlify: [https://www.netlify.com/](https://www.netlify.com/)
-
----
-
-Feel free to copy and paste this README into your project. Adjust any sections as needed to better fit your project's specifics.
+Thanks for the Opportunity
+Thank you for the opportunity to complete this test for the job application. It has been a valuable and rewarding experience to showcase my skills and contribute to this project.
