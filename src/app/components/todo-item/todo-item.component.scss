@@ -1,0 +1,27 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.todo-item.completed {
+  background-color: #E0E0E0; /* Gris clair pour les tâches complétées */
+}
+
+.task-title {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+}

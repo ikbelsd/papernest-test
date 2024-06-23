@@ -1,1 +1,10 @@
-<p>todo-item works!</p>
+<mat-list-item class="todo-item" [class.completed]="task.completed">
+  <mat-checkbox [checked]="task.completed" (change)="onToggleTask()"></mat-checkbox>
+  <span>{{ task.title }}</span>
+  <button mat-icon-button (click)="onEditTask()" [disabled]="task.completed">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button (click)="onDeleteTask()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-list-item>

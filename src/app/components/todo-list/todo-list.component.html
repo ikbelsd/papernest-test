@@ -1,1 +1,45 @@
-<p>todo-list works!</p>
+<div class="todo-list">
+  <!-- Task Input Section -->
+  <div class="header">
+    <div class="input-section">
+      <div class="input-row">
+        <app-todo-input class="task-input" *ngIf="!editMode" (addTask)="onAddTask($event)"></app-todo-input>
+        <mat-form-field appearance="outline" class="ttl-input">
+          <mat-label>TTL (ms)</mat-label>
+          <input matInput [(ngModel)]="ttl" type="number" placeholder="TTL (ms)">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <!-- Task Edit Section -->
+  <div *ngIf="editMode" class="edit-task">
+    <mat-form-field appearance="outline" class="edit-input">
+      <mat-label>Edit task</mat-label>
+      <input matInput [value]="taskToEdit?.title" (input)="onTitleChange($event)" placeholder="Edit task">
+    </mat-form-field>
+    <div class="edit-buttons">
+      <button mat-raised-button color="primary" (click)="saveTask()">Save</button>
+      <button mat-button color="warn" (click)="editMode = false; taskToEdit = null;">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Task Search Section -->
+  <div class="search-section">
+    <app-todo-search (searchTask)="onSearchTask($event)"></app-todo-search>
+  </div>
+
+  <!-- Task List Section with Drag and Drop -->
+  <cdk-virtual-scroll-viewport itemSize="80" class="task-viewport">
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <div *cdkVirtualFor="let task of filteredTasks" cdkDrag [cdkDragData]="task" class="task-item" [class.ttl-task]="task.ttl">
+        <app-todo-item 
+          [task]="task" 
+          (editTask)="onEditTask($event)" 
+          (deleteTask)="onDeleteTask($event)" 
+          (toggleTask)="onToggleTask($event)">
+        </app-todo-item>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

@@ -1,0 +1,156 @@
+/* Root container for the task list */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Roboto', sans-serif;
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+  padding: 20px;
+}
+
+/* Header containing input fields for adding tasks */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure header is full width */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Task input section */
+.input-section {
+  width: 100%;
+}
+
+/* Row containing the text input and TTL input fields */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Limit the width of the TTL input field */
+.ttl-input {
+  max-width: 150px;
+}
+
+/* Task search section */
+.search-section {
+  margin-bottom: 20px;
+  width: 100%; /* Ensure search section is full width */
+}
+
+/* Styles for the task add and edit sections */
+.edit-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-task .edit-input {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Button container for the edit section */
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Virtual scroll viewport for the task list */
+.task-viewport {
+  height: 600px;
+  width: 100%; 
+  border: none;
+  border-radius: 12px;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box; 
+}
+
+/* Styles for each task item */
+.task-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; 
+}
+
+/* Add a left orange border for tasks with TTL */
+.task-item.ttl-task {
+  border-left: 4px solid #ff9800;
+}
+
+/* Hover effects for each task item */
+.task-item:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Material form field */
+mat-form-field {
+  width: 100%;
+  height: 56px; 
+}
+
+/* Generic button styles */
+button {
+  font-size: 16px;
+  padding: 0 16px;
+  border-radius: 8px;
+  height: 56px; /* Match the height of the input field */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary raised button with Material */
+.mat-raised-button.mat-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Warning button with Material */
+.mat-button.mat-warn {
+  color: #dc3545;
+}
+
+/* Positioning buttons to the extreme right of each task item */
+.button-group {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ttl-input {
+    max-width: 100%;
+  }
+}

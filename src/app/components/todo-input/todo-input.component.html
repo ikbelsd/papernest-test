@@ -1,1 +1,8 @@
-<p>todo-input works!</p>
+<div class="todo-input">
+    <mat-form-field appearance="outline" class="task-input">
+      <mat-label>Enter a new task</mat-label>
+      <input matInput [(ngModel)]="title" placeholder="Enter a new task">
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="add-task-button" (click)="onAddTask()">Add Task</button>
+  </div>
+  

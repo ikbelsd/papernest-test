@@ -1,0 +1,31 @@
+.todo-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .task-input {
+    flex: 1;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    height: 56px; /* Ensure the height matches the button */
+  }
+  
+  .add-task-button {
+    height: 56px; /* Match the height of the input field */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0 16px;
+    border-radius: 8px;
+  }
+  
+  .mat-raised-button.mat-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
