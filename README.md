@@ -79,5 +79,7 @@ This is the template for the todo list component. It includes the input section,
 
 This is the test spec for the todo list component. It includes tests for component creation, dispatching actions, and verifying the visibility of the TTL input field based on the edit mode.
 
-Thanks for the Opportunity
+
+## Thanks for the Opportunity
+
 Thank you for the opportunity to complete this test for the job application. It has been a valuable and rewarding experience to showcase my skills and contribute to this project.
