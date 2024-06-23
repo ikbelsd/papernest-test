@@ -1,31 +1,100 @@
-<<<<<<< HEAD
-# TodoApp
+Sure! Here's a complete README for your project:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+# Todo List Application
 
-## Development server
+This is a Todo List application built with Angular and NgRx for state management. It includes features such as adding tasks, editing tasks, deleting tasks, toggling task completion, searching tasks, and reordering tasks using drag and drop. The application also supports TTL (time-to-live) for tasks and periodic checking for expired tasks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Live Version
 
-## Code scaffolding
+You can view the live version of the application [here](https://master--papernest-test.netlify.app/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- **Add Task:** Add a new task with an optional TTL value.
+- **Edit Task:** Edit the title of an existing task.
+- **Delete Task:** Delete a task.
+- **Toggle Task:** Mark a task as completed or not completed.
+- **Search Task:** Search tasks by title.
+- **Reorder Tasks:** Drag and drop tasks to reorder them.
+- **TTL Support:** Set a time-to-live for tasks and automatically remove expired tasks.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js and npm installed. You can download them from [here](https://nodejs.org/).
+- Angular CLI installed globally. You can install it using the following command:
+  ```bash
+  npm install -g @angular/cli
+  ```
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-## Further help
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# papernest-test
->>>>>>> 03ad3c2dd4fc3dd2370f35940a0f211afee86f04
+### Running the Application
+
+To run the application locally, use the following command:
+```bash
+ng serve
+```
+Open your browser and navigate to `http://localhost:4200`.
+
+### Running the Tests
+
+To run the tests, use the following command:
+```bash
+npx jest
+```
+
+## Project Structure
+
+- **src/app/components/todo-list/**: Contains the main todo list component.
+- **src/app/components/todo-input/**: Contains the input component for adding tasks.
+- **src/app/components/todo-item/**: Contains the item component for displaying individual tasks.
+- **src/app/components/todo-search/**: Contains the search component for filtering tasks.
+- **src/app/models/**: Contains the task model.
+- **src/app/store/**: Contains NgRx actions, reducers, and selectors for managing the application state.
+
+## Code Explanation
+
+### `todo-list.component.ts`
+
+This is the main component that manages the todo list. It handles adding tasks, editing tasks, deleting tasks, toggling task completion, searching tasks, and reordering tasks using drag and drop.
+
+### `todo-list.component.html`
+
+This is the template for the todo list component. It includes the input section, edit section, search section, and the task list section with drag and drop functionality.
+
+### `todo-list.component.spec.ts`
+
+This is the test spec for the todo list component. It includes tests for component creation, dispatching actions, and verifying the visibility of the TTL input field based on the edit mode.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or new features you would like to add.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- Angular: [https://angular.io/](https://angular.io/)
+- NgRx: [https://ngrx.io/](https://ngrx.io/)
+- Jest: [https://jestjs.io/](https://jestjs.io/)
+- Angular Material: [https://material.angular.io/](https://material.angular.io/)
+- Netlify: [https://www.netlify.com/](https://www.netlify.com/)
+
+---
+
+Feel free to copy and paste this README into your project. Adjust any sections as needed to better fit your project's specifics.
